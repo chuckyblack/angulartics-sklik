@@ -16,7 +16,7 @@
   "scripts": {
     "clean": "rm -rf dist",
     "prebuild": "npm run clean",
-    "build": "mkdir -p dist && uglifyjs lib/angulartics-sklik.js --compress --source-map dist/angulartics-sklik.min.js.map --source-map-root .. --source-map-url ../dist/angulartics-sklik.min.js.map -o dist/angulartics-sklik.min.js",
+    "build": "mkdir -p dist && uglifyjs lib/angulartics-sklik.js --compress --mangle --source-map dist/angulartics-sklik.min.js.map --source-map-root .. --source-map-url ../dist/angulartics-sklik.min.js.map -o dist/angulartics-sklik.min.js",
     "test": "npm build"
   },
   "peerDependencies": {
