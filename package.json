@@ -1,0 +1,28 @@
+{
+  "name": "angulartics-sklik",
+  "version": "1.0.0",
+  "description": "Sklik plugin for Angulartics",
+  "main": "lib/index.js",
+  "repository": "git@github.com:chuckyblack/angulartics-sklik.git",
+  "author": "Jaromír Pufler <jaromir.pufler@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "angularjs",
+    "angulartics",
+    "analytics",
+    "sklik",
+    "angulartics-plugin"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "build": "mkdir -p dist && uglifyjs lib/angulartics-sklik.js --compress --source-map dist/angulartics-sklik.min.js.map --source-map-root .. --source-map-url ../dist/angulartics-sklik.min.js.map -o dist/angulartics-sklik.min.js",
+    "test": "npm build"
+  },
+  "peerDependencies": {
+    "angulartics": "^1.0.0"
+  },
+  "devDependencies": {
+    "uglifyjs": "^2.4.11"
+  }
+}
